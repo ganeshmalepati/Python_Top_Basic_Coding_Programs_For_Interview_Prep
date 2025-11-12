@@ -1,31 +1,34 @@
 pipeline {
     agent any
-    
+
+    environment {
+        REPO_URL = 'https://github.com/ganeshmalepati/Basic_Ten_Code.git'
+    }
+
     stages {
-        stage("Cloning Git Repository"){
+        stage("Cloning Git Repository") {
             steps {
-                checkout scm
+                // Automatically use the branch Jenkins is building
+                git branch: "${env.BRANCH_NAME}", url: "${REPO_URL}"
             }
         }
-        stage("Build Docker Image"){
+
+        stage("Build Docker Image") {
             steps {
-                script {
-                    dockerImage = docker.build("my-jenkins-tencode-app")
-                }
+                sh "docker build -t Basic_Code_Snippet_job:${env.BRANCH_NAME} ."
             }
         }
-        stage("Run Docker Container for python codes"){
+
+        stage("Run Docker Container for Python Codes") {
             steps {
-                script {
-                    dockerImage.run("-d")
-                }
+                sh "docker run --rm password-pipeline-job:${env.BRANCH_NAME}"
             }
         }
     }
 
     post {
         always {
-            echo "Pipeline has been successfully completed"
+            echo "Pipeline completed for branch: ${env.BRANCH_NAME}"
         }
     }
 }

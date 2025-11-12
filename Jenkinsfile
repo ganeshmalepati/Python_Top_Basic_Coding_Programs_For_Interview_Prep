@@ -15,13 +15,13 @@ pipeline {
 
         stage("Build Docker Image") {
             steps {
-                sh "docker build -t Basic_Code_Snippet_job:${env.BRANCH_NAME} ."
+                sh "docker build -t basic-code-snippet-job ."
             }
         }
 
         stage("Run Docker Container for Python Codes") {
             steps {
-                sh "docker run --rm password-pipeline-job:${env.BRANCH_NAME}"
+                sh "docker run --rm basic-code-snippet-job"
             }
         }
     }

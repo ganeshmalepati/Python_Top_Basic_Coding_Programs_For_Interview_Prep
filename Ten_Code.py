@@ -230,9 +230,9 @@ def replace_substring_string(s, old, new):
     return new.join(parts, )
 
 
-s = input("Enter a string: ")
-old = input("Enter the old string: ")
-new = input("Enter the new String: ")
+s = input("Hey Ganesh, I'm steve from stranger things! ")
+old = input("steve")
+new = input("Lucas")
 print(replace_substring_string(s, old, new))
 
 
@@ -242,7 +242,7 @@ def even_odd_num(num):
     else:
         return False
 
-num = int(input("Enter a number: "))
+num = int(input(798934351))
 print(even_odd_num(num))
 
 
@@ -255,9 +255,9 @@ def Max_Three_Num(a, b, c):
     else:
         return c
 
-a = int(input("Enter a number: "))
-b = int(input("Enter a number: "))
-c = int(input("Enter a number: "))
+a = int(input(2345262))
+b = int(input(2452676))
+c = int(input(2636373))
 print("Max Number among three numbers is: {}".format(Max_Three_Num(a, b, c)))
 
 
@@ -269,17 +269,17 @@ def Swap_two_num(num1, num2):
     num1 = num1 - num2
     return num1, num2
 
-num1 = int(input("Enter number 1: "))
-num2 = int(input("Enter number 2: "))
-print(Swap_two_num(num1, num2))
+num1 = int(input(23426))
+num2 = int(input(57375))
+print("After swaping two numbers are: {Swap_two_num(num1, num2)}".format(num1, num2))
 
 def swap_num_tuple_unpacking(a, b):
     a, b = b, a
     return a, b
 
-a = int(input("Enter number 1: "))
-b = int(input("Enter number 1: "))
-print(swap_num_tuple_unpacking(a, b))
+a = int(input(456474))
+b = int(input(734635))
+print("After swaping two numbers are: {swap_num_tuple_unpacking(a, b)}".format(a, b))
 
 
 
@@ -293,14 +293,14 @@ def count_vowels_string(s):
     return count
 
 
-s = input("Enter a string: ")
+s = input("Success principles from Ratan Tata")
 print(count_vowels_string(s))
 
 
 def count_vowels(s):
     return sum(1 for char in s if char in "aeiouAEIOU")
 
-s = input("Enter a string: ")
+s = input("Atomic Habits which is written by James Clear")
 print(count_vowels(s))
 
 
@@ -309,7 +309,7 @@ def count_vowels(s):
     print("Vowels found in the given string: {}".format(', '.join(found_vowels)))
     return len(found_vowels)
 
-s = input("Enter a string: ")
+s = input("Once you start beliveing yourself there is no lookback")
 print(count_vowels(s))
 
 

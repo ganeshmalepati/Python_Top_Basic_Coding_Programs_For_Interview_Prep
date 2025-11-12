@@ -230,7 +230,7 @@ def replace_substring_string(s, old, new):
     return new.join(parts, )
 
 
-s = input("Hey Ganesh, I'm steve from stranger things! ")
+s = "Hey Ganesh, I'm steve from stranger things!"
 old = "steve"
 new = "Lucas"
 print(replace_substring_string(s, old, new))
@@ -311,6 +311,7 @@ def count_vowels(s):
 
 s = "Once you start beliveing yourself there is no lookback"
 print(count_vowels(s))
+
 
 
 

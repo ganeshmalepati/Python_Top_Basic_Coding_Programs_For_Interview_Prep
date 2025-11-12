@@ -271,7 +271,7 @@ def Swap_two_num(num1, num2):
 
 num1 = 23426
 num2 = 57375
-print("After swaping two numbers are: {Swap_two_num(num1, num2)}".format(num1, num2))
+print("After swaping two numbers are: {}".format(Swap_two_num(num1, num2))
 
 def swap_num_tuple_unpacking(a, b):
     a, b = b, a
@@ -279,7 +279,7 @@ def swap_num_tuple_unpacking(a, b):
 
 a = 456474
 b = 734635
-print("After swaping two numbers are: {swap_num_tuple_unpacking(a, b)}".format(a, b))
+print("After swaping two numbers are: {}".format(swap_num_tuple_unpacking(a, b)))
 
 
 
@@ -294,7 +294,7 @@ def count_vowels_string(s):
 
 
 s = "Success principles from Ratan Tata"
-print(count_vowels_string(s))
+print("Vowels count in the given text is: {}".format(count_vowels_string(s))
 
 
 def count_vowels(s):
@@ -311,6 +311,7 @@ def count_vowels(s):
 
 s = "Once you start beliveing yourself there is no lookback"
 print(count_vowels(s))
+
 
 
 

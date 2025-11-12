@@ -217,3 +217,100 @@ def Non_repeat_char_string(s):
         
 s = "swiss bank"
 print(Non_repeat_char_string(s))
+
+
+
+"""
+    Replace the old sub-string with new sub-string using split and join case
+"""
+
+
+def replace_substring_string(s, old, new):
+    parts = s.split(old)
+    return new.join(parts, )
+
+
+s = input("Enter a string: ")
+old = input("Enter the old string: ")
+new = input("Enter the new String: ")
+print(replace_substring_string(s, old, new))
+
+
+def even_odd_num(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+
+num = int(input("Enter a number: "))
+print(even_odd_num(num))
+
+
+
+def Max_Three_Num(a, b, c):
+    if a>b and a>c:
+        return a
+    elif b>a and b>c:
+        return b
+    else:
+        return c
+
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
+c = int(input("Enter a number: "))
+print("Max Number among three numbers is: {}".format(Max_Three_Num(a, b, c)))
+
+
+
+
+def Swap_two_num(num1, num2):
+    num1 = num1 + num2
+    num2 = num1 - num2
+    num1 = num1 - num2
+    return num1, num2
+
+num1 = int(input("Enter number 1: "))
+num2 = int(input("Enter number 2: "))
+print(Swap_two_num(num1, num2))
+
+def swap_num_tuple_unpacking(a, b):
+    a, b = b, a
+    return a, b
+
+a = int(input("Enter number 1: "))
+b = int(input("Enter number 1: "))
+print(swap_num_tuple_unpacking(a, b))
+
+
+
+
+def count_vowels_string(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+
+s = input("Enter a string: ")
+print(count_vowels_string(s))
+
+
+def count_vowels(s):
+    return sum(1 for char in s if char in "aeiouAEIOU")
+
+s = input("Enter a string: ")
+print(count_vowels(s))
+
+
+def count_vowels(s):
+    found_vowels = [char for char in s if char in "aeiouAEIOU"]
+    print("Vowels found in the given string: {}".format(', '.join(found_vowels)))
+    return len(found_vowels)
+
+s = input("Enter a string: ")
+print(count_vowels(s))
+
+
+

@@ -10,7 +10,7 @@ pipeline {
         stage("Build Docker Image"){
             steps {
                 script {
-                    dockerImage = docker.Build("my-jenkins-tencode-app")
+                    dockerImage = docker.build("my-jenkins-tencode-app")
                 }
             }
         }

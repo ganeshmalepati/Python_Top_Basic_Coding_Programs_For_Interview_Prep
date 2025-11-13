@@ -273,15 +273,6 @@ num1 = 23426
 num2 = 57375
 print("After swaping two numbers are: {}".format(Swap_two_num(num1, num2))
 
-def swap_num_tuple_unpacking(a, b):
-    a, b = b, a
-    return a, b
-
-a = 456474
-b = 734635
-print("After swaping two numbers are: {}".format(swap_num_tuple_unpacking(a, b)))
-
-
 
 
 def count_vowels_string(s):
@@ -311,6 +302,7 @@ def count_vowels(s):
 
 s = "Once you start beliveing yourself there is no lookback"
 print(count_vowels(s))
+
 
 
 

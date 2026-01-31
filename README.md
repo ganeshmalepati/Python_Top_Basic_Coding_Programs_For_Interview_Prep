@@ -1,0 +1,1 @@
+This repository contains a curated collection of basic to frequently asked Python coding programs designed for technical interview preparation. It covers fundamental Python concepts such as loops, conditionals, functions, strings, lists, dictionaries, and number-based problems.

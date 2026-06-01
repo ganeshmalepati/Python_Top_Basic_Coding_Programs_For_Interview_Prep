@@ -215,5 +215,81 @@ print(second_largest_number(my_list))
 
 
 
+def two_sum_stored(data, target):
+    left = 0
+    right = len(data)-1
 
+    while left < right:
+        total = data[left] + data[right]
+
+        if total == target:
+            return [left, right]
+        elif total < target:
+            left += 1
+        else:
+            right -= 1
+    return[-1, -1]
+
+data = [3, 5, 7, 8, 11]
+print(two_sum_stored(data, target=16))
+
+
+def merge_sorted_arrays(arr1, arr2):
+    i, j = 0, 0
+    merged = []
+    
+    # Compare elements from both arrays and append the smaller one
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] <= arr2[j]:
+            merged.append(arr1[i])
+            i += 1
+        else:
+            merged.append(arr2[j])
+            j += 1
+            
+    # Append any remaining elements left over from either array
+    merged.extend(arr1[i:])
+    merged.extend(arr2[j:])
+    
+    return merged
+
+# Example usage:
+list_a = [1, 3, 5, 7]
+list_b = [2, 4, 6, 8, 10]
+print(merge_sorted_arrays(list_a, list_b))
+# Output: [1, 2, 3, 4, 5, 6, 7, 8, 10]
+
+
+
+def compress_string(data):
+    if not data:
+        return ""
+    
+    result = ""
+    count = 1
+
+
+
+
+def compress_string(s):
+    if not s:
+        return ""
+
+    result = ""
+    count = 1
+
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            count += 1
+        else:
+            result += s[i - 1] + str(count)
+            count = 1
+
+    # last character
+    result += s[-1] + str(count)
+
+    return result
+
+
+print(compress_string("aaabbc"))
     
